@@ -4,20 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AGenNext Blog</title>
-  <meta name="description" content="AGenNext Blog">
+  <meta name="description" content="News, ideas, and updates from AGenNext.">
   <style>
-    :root { color-scheme: light dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0f172a; color: #f8fafc; }
-    main { max-width: 720px; padding: 48px 24px; text-align: center; }
-    h1 { font-size: clamp(2.25rem, 8vw, 4.5rem); margin: 0 0 16px; letter-spacing: -0.04em; }
-    p { font-size: 1.125rem; line-height: 1.7; color: #cbd5e1; margin: 0 auto; }
-    a { color: #93c5fd; }
+    :root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #0f172a; background: #f8fafc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 42%); }
+    header { padding: 72px 24px 42px; text-align: center; }
+    .eyebrow { color: #4f46e5; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+    h1 { margin: 12px auto 16px; font-size: clamp(2.4rem, 8vw, 5rem); line-height: .95; letter-spacing: -.06em; max-width: 900px; }
+    .lead { max-width: 680px; margin: 0 auto; color: #475569; font-size: 1.15rem; line-height: 1.7; }
+    main { max-width: 980px; margin: 0 auto; padding: 0 24px 72px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
+    article { background: white; border: 1px solid #e2e8f0; border-radius: 24px; padding: 26px; box-shadow: 0 18px 50px rgba(15, 23, 42, .08); }
+    article:hover { transform: translateY(-3px); transition: transform .2s ease; }
+    time { color: #64748b; font-size: .9rem; }
+    h2 { margin: 14px 0 10px; font-size: 1.45rem; letter-spacing: -.03em; }
+    p { color: #475569; line-height: 1.65; }
+    a { display: inline-flex; margin-top: 12px; color: #4f46e5; font-weight: 700; text-decoration: none; }
+    footer { text-align: center; color: #64748b; padding: 32px 24px; border-top: 1px solid #e2e8f0; }
   </style>
 </head>
 <body>
+  <header>
+    <div class="eyebrow">AGenNext Blog</div>
+    <h1>Building the next generation of autonomous agents.</h1>
+    <p class="lead">Updates, engineering notes, and product thinking from the AGenNext team.</p>
+  </header>
   <main>
-    <h1>AGenNext Blog</h1>
-    <p>This site is published with GitHub Pages. Replace this placeholder with your blog content.</p>
+    <section class="grid" aria-label="Blog posts">
+      <article>
+        <time datetime="2026-05-21">May 21, 2026</time>
+        <h2>Welcome to the AGenNext Blog</h2>
+        <p>We are starting this space to share progress, research notes, and lessons from building practical agent systems.</p>
+        <a href="#welcome">Read post →</a>
+      </article>
+      <article>
+        <time datetime="2026-05-21">May 21, 2026</time>
+        <h2>What We Are Building</h2>
+        <p>AGenNext focuses on reliable autonomous workflows that can help teams move faster while staying transparent and controllable.</p>
+        <a href="#building">Read post →</a>
+      </article>
+      <article>
+        <time datetime="2026-05-21">May 21, 2026</time>
+        <h2>Follow the Roadmap</h2>
+        <p>Expect posts on product updates, agent orchestration, evaluation, deployment patterns, and real-world use cases.</p>
+        <a href="#roadmap">Read post →</a>
+      </article>
+    </section>
   </main>
+  <footer>© 2026 AGenNext. Published with GitHub Pages.</footer>
 </body>
 </html>
