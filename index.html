@@ -15,7 +15,6 @@
       -moz-osx-font-smoothing: grayscale;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background:
@@ -53,15 +52,29 @@
       border-radius: 22px;
       padding: 28px;
       box-shadow: 0 14px 40px rgba(17, 24, 39, .07);
+      transition: transform .18s ease, box-shadow .18s ease;
     }
-    article:hover { transform: translateY(-3px); transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 20px 54px rgba(17, 24, 39, .10); }
+    article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 54px rgba(17, 24, 39, .10);
+    }
     time { color: #6b7280; font-size: .92rem; font-weight: 600; }
     h2 { margin: 14px 0 12px; font-size: 1.42rem; line-height: 1.2; letter-spacing: -.025em; }
     p { color: #4b5563; line-height: 1.72; margin: 0; }
-    a { display: inline-flex; margin-top: 18px; color: #4338ca; font-weight: 750; text-decoration: none; }
+    a {
+      display: inline-flex;
+      margin-top: 18px;
+      color: #4338ca;
+      font-weight: 750;
+      text-decoration: none;
+    }
     a:hover, a:focus { text-decoration: underline; }
-    .post-link::after { content: ""; }
-    footer { text-align: center; color: #6b7280; padding: 34px 24px; border-top: 1px solid #e5e7eb; }
+    footer {
+      text-align: center;
+      color: #6b7280;
+      padding: 34px 24px;
+      border-top: 1px solid #e5e7eb;
+    }
   </style>
 </head>
 <body>
@@ -72,23 +85,25 @@
   </header>
   <main>
     <section class="grid" aria-label="Blog posts">
-      <article id="welcome">
+      <article>
         <time datetime="2026-05-21">May 21, 2026</time>
         <h2>Welcome to the AGenNext Blog</h2>
         <p>We are starting this space to share progress, research notes, and lessons from building practical agent systems.</p>
-        <a class="post-link" href="https://agennext.github.io/blog/#welcome" aria-label="Open Welcome to the AGenNext Blog post">Read post →</a>
+        <a href="posts/welcome.html">Read post →</a>
       </article>
-      <article id="building">
+
+      <article>
         <time datetime="2026-05-21">May 21, 2026</time>
         <h2>What We Are Building</h2>
         <p>AGenNext focuses on reliable autonomous workflows that can help teams move faster while staying transparent and controllable.</p>
-        <a class="post-link" href="https://agennext.github.io/blog/#building" aria-label="Open What We Are Building post">Read post →</a>
+        <a href="posts/building.html">Read post →</a>
       </article>
-      <article id="roadmap">
+
+      <article>
         <time datetime="2026-05-21">May 21, 2026</time>
         <h2>Follow the Roadmap</h2>
         <p>Expect posts on product updates, agent orchestration, evaluation, deployment patterns, and real-world use cases.</p>
-        <a class="post-link" href="https://agennext.github.io/blog/#roadmap" aria-label="Open Follow the Roadmap post">Read post →</a>
+        <a href="posts/roadmap.html">Read post →</a>
       </article>
     </section>
   </main>
