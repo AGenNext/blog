@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Orchestration as Infrastructure</title>
+  <meta name="description" content="How AGenNext thinks about agent orchestration as a core infrastructure layer.">
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #111827; background: #fafafa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
+    main { max-width: 760px; margin: 0 auto; padding: 64px 24px 88px; }
+    a { color: #4338ca; font-weight: 750; text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    .back { display: inline-flex; margin-bottom: 40px; }
+    time { color: #6b7280; font-size: .95rem; font-weight: 650; }
+    h1 { margin: 16px 0 22px; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.04; letter-spacing: -.05em; }
+    p { color: #4b5563; font-size: 1.08rem; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../index.html">← Back to all posts</a>
+    <article>
+      <time datetime="2026-05-22">May 22, 2026</time>
+      <h1>Agent Orchestration as Infrastructure</h1>
+      <p>Agent orchestration is the layer that turns individual model calls into useful workflows. It decides which tools are available, how tasks are broken down, how state is passed between steps, and when humans should be brought back into the loop.</p>
+      <p>At AGenNext, we think orchestration should be treated like infrastructure. It needs clear interfaces, predictable execution, policy boundaries, logs, retries, and evaluation hooks. Without those pieces, agents remain impressive prototypes but fragile production systems.</p>
+      <p>A strong orchestration layer makes it easier to build agents that can cooperate, recover from uncertainty, and execute work in a way teams can understand. That is the difference between an AI demo and an operational system.</p>
+    </article>
+  </main>
+</body>
+</html>
