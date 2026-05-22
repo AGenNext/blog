@@ -27,3 +27,7 @@ After that, every push to `main` will trigger the Pages deployment workflow.
 ## Editing posts
 
 For now, posts are listed directly in `index.html`. Edit the `<article>` blocks to add, remove, or update blog posts.
+
+## Deployment trigger
+
+Last manual deployment trigger: 2026-05-22.
