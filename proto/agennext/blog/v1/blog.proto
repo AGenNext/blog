@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package agennext.blog.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/AGenNext/blog/gen/go/agennext/blog/v1;blogv1";
+
+enum BlogPostStatus {
+  BLOG_POST_STATUS_UNSPECIFIED = 0;
+  BLOG_POST_STATUS_DRAFT = 1;
+  BLOG_POST_STATUS_REVIEWED = 2;
+  BLOG_POST_STATUS_APPROVED = 3;
+  BLOG_POST_STATUS_PUBLISHED = 4;
+  BLOG_POST_STATUS_UPDATED = 5;
+  BLOG_POST_STATUS_RETIRED = 6;
+  BLOG_POST_STATUS_ARCHIVED = 7;
+}
+
+message BlogAuthor {
+  string id = 1;
+  string name = 2;
+  string identity_ref = 3;
+  repeated string evidence_refs = 4;
+}
+
+message BlogPost {
+  string id = 1;
+  string title = 2;
+  string slug = 3;
+  string canonical_url = 4;
+  string author_id = 5;
+  repeated string tags = 6;
+  repeated string evidence_refs = 7;
+  repeated string artifact_refs = 8;
+  BlogPostStatus status = 9;
+  google.protobuf.Timestamp published_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+}
+
+message BlogSeries {
+  string id = 1;
+  string title = 2;
+  repeated string post_ids = 3;
+  BlogPostStatus status = 4;
+}
+
+message SitemapEntry {
+  string id = 1;
+  string url = 2;
+  google.protobuf.Timestamp last_modified = 3;
+  string change_frequency = 4;
+  double priority = 5;
+}
